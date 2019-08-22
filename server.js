@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes/index");
+var fallback = require('express-history-api-fallback')
 
 // Configure middleware
 
@@ -33,9 +34,14 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
+
+var root = __dirname + '/client/build';
+app.use(express.static(root))
+app.use(fallback('index.html', { root: root }))
+
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> App running on port ${PORT}!`);

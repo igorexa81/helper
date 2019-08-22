@@ -59,7 +59,7 @@ class JobDetail extends Component {
                         this.props.handleApply(job._id, this.state.jobDate)
                         }
                         else {
-                            this.props.alert.show("Please Enter The Date.", {type: "error"})
+                            this.props.alert.show("Please Enter The Valid Date", {type: "error"})
                         }
                         //this.props.alert.show("Error! Job cannot be applied on this date.", {type: "error"})
                         //To show an error occurred
