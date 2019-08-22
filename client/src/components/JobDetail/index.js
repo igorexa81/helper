@@ -53,7 +53,8 @@ class JobDetail extends Component {
                 />}
                 {this.props.handleApply && <div>
                     <button onClick={() => {
-                        const dateTodayOrInFuture = this.state.jobDate
+                        const dateTodayOrInFuture = moment(this.state.jobDate).diff(moment.utc(moment()), 'days') >= 0;
+            
                         if(dateTodayOrInFuture){
                         this.props.handleApply(job._id, this.state.jobDate)
                         }
