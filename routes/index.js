@@ -8,22 +8,22 @@ const jwt = require("jsonwebtoken");
 
 router.use(userRoutes);
 
-router.use((req, res, next) => {
-    try {
-        // check the token
-        // console.log(req.headers.token);
+// router.use((req, res, next) => {
+//     try {
+//         // check the token
+//         // console.log(req.headers.token);
 
-        let token = req.headers.token;
-        let decoded = jwt.verify(token, "igor");
-        let userId = decoded.id;
-        req.userId = userId;
-        next();
-    } catch (error) {
-        throw new Error(error);
-    }
+//         let token = req.headers.token;
+//         let decoded = jwt.verify(token, "igor");
+//         let userId = decoded.id;
+//         req.userId = userId;
+//         next();
+//     } catch (error) {
+//         throw new Error(error);
+//     }
 
 
-})
+// })
 router.use(userInfoRoutes);
 router.use(jobRoutes);
 router.use(hireRoutes);
