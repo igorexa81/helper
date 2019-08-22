@@ -32,11 +32,12 @@ if (process.env.NODE_ENV === "production") {
 //--//////// Ends mongo exercise (Removed the server)
 
 var root = __dirname + '/client/build';
-app.use(express.static(root))
-app.use(fallback('index.html', { root: root }))
+app.use('/', express.static(root))
+//app.use(fallback('index.html', { root: root }))
 
 
 app.use(routes);
+
 // Send every other request to the React app
 // Define any API routes before this runs
 // app.get("*", (req, res) => {
