@@ -31,6 +31,11 @@ if (process.env.NODE_ENV === "production") {
 //app.use('/', apiRoutes);
 //--//////// Ends mongo exercise (Removed the server)
 
+var root = __dirname + '/client/build';
+app.use(express.static(root))
+app.use(fallback('index.html', { root: root }))
+
+
 app.use(routes);
 // Send every other request to the React app
 // Define any API routes before this runs
@@ -38,9 +43,6 @@ app.use(routes);
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-var root = __dirname + '/client/build';
-app.use(express.static(root))
-app.use(fallback('index.html', { root: root }))
 
 
 app.listen(PORT, () => {
