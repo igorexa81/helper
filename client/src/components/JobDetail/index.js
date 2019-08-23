@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import moment from 'moment';
 import { withAlert } from 'react-alert';
 
+const styles = {
+    jobCard: {
+        display: 'inline-block',
+        // fontSize: 12,
+        // background: 'green'
+    }
+}
+
 class JobDetail extends Component {
 
     state = {
@@ -31,7 +39,7 @@ class JobDetail extends Component {
 
         return (
 
-            <div className="z-depth-1 grey lighten-4 row" key={job._id} >
+            <div style={styles.jobCard} className="z-depth-1 grey lighten-4 row" key={job._id} >
                 <strong>Skills: </strong> {this.jobType(job)}
                 <br></br>
                 <strong>Job Details:</strong> {job.jobDetails}
