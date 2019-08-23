@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
-import Jumbotron from '../components/Jumbotron';
 import Nav from "../components/Nav";
+import Jumbotron from '../components/Jumbotron';
+
 import JobDetail from '../components/JobDetail';
 import { withAlert } from 'react-alert';
 
@@ -46,13 +47,9 @@ class Hire extends Component {
 
   render() {
     return (
-     
+    
      <div className="container">
-        <Jumbotron
-          title="Job"
-          lead="All of your job in one place"
-          
-        />
+        <Jumbotron><h1>Your Jobs</h1></Jumbotron>
         <Nav />
         <div>
           {this.state.allHire.map((hire, i) => {

@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import API from '../utils/API';
 
+const styles = {
+    welcomeText: {
+        fontSize: "18px",
+        fontFamily: "Fugaz One, cursive",
+        marginLeft:"1em",
+        marginTop:"5px"
+    }
+}
+
 const Header = (props) => {
 
     let [email, setEmail] = useState('');
@@ -23,7 +32,7 @@ const Header = (props) => {
     }
 
     return (
-        <div>welcome back, {email}. <button onClick={(e) => {
+        <div style={styles.welcomeText}>Welcome back, {email}. <button type="button" class="btn btn-primary" onClick={(e) => {
             e.preventDefault();
             localStorage.removeItem("token");
             window.location.href = "/"

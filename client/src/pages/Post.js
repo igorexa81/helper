@@ -48,11 +48,11 @@ class Post extends Component {
        <Nav />
           <Col size="md-12">
             <Jumbotron>
-                <h1>HelpGods!</h1>
+                <h1>Post a Job!</h1>
             </Jumbotron>
 
             <center>   
-                <h5 className="black-text">Post a job</h5>
+                <h5 className="black-text"></h5>
 
               <div className="container">
                 <div className="z-depth-1 grey lighten-4 row" >

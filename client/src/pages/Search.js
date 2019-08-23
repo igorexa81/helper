@@ -6,7 +6,6 @@ import API from '../utils/API';
 import JobDetail from '../components/JobDetail';
 import { withAlert } from 'react-alert';
 
-
 class Search extends Component {
   state = {
     yardwork: false,
@@ -116,7 +115,7 @@ class Search extends Component {
         <Nav />
         <Col size="md-12">
           <Jumbotron>
-            <h1>UBERHELP!</h1>
+            <h1>Find the perfect job now!</h1>
           </Jumbotron>
 
           <center>

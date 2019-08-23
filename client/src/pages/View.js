@@ -68,11 +68,11 @@ class View extends Component {
         <Nav />
         <Col size="md-12">
           <Jumbotron>
-            <h1>HelpGods!</h1>
+            <h1>Apply Now!</h1>
           </Jumbotron>
 
           <center>
-            <h5 className="black-text"> <strong>All Current Job Listings</strong></h5>
+            <h4 className="black-text"> <strong>All Current Job Listings</strong></h4>
             <div className="container">
               {this.state.jobs.length ? (
                 <div className="z-depth-1 grey lighten-2 row">
