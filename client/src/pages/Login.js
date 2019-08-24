@@ -59,7 +59,7 @@ class Login extends Component {
 
         <Col size="md-12">
           <Jumbotron>
-            <h1>HelpGods!</h1>
+            <h1>The Helpers!</h1>
           </Jumbotron>
 
           <center>
