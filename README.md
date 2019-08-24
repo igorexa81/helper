@@ -29,17 +29,11 @@ Moment.js/Moment.utc
 
 # Installation
 
-```<npm init>```
 ```<npm install>```
-```<npm install express>```
-```<npm i mongoose>```
-```<npm i morgan>```
-
-
 
 
 # Created by:
 
 Igor (GitHub: https://github.com/igorexa81)
-Spencer (GitHub: https://github.com/)
+Spencer (GitHub: https://github.com/spencerchase1991)
 Emma (GitHub: https://github.com/bunsnesse)
